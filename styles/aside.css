@@ -1,4 +1,19 @@
 aside{
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 15px;
+    color: white;
+}
+
+.aside_button_panel{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside_button{
+    
+    min-width: 200px;
+    width: 100%;
+    border-radius: 5px;
 }

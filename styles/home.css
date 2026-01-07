@@ -1,11 +1,11 @@
 .home{
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 15px;
     padding: 20px;
 }
 
 .home__content{
-    
-    border: 1px solid black;
+    color: white;
+    border: 1px solid white;
     border-radius: 15px;
 }
