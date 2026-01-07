@@ -1,0 +1,11 @@
+@font-face {
+
+  /* font-family: Sen;
+  src: url('../../../Fonts/Sen/Sen-Bold.ttf');
+  
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700; */
+  src: url('../fonts/pixel0.ttf');
+  font-family: pixel0;
+}
