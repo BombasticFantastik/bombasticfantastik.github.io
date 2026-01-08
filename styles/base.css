@@ -1,8 +1,23 @@
 body{
     background-color: black;
     font-family: pixel0;
+    font-weight: bold;
+}
+
+h1{
+    font-family: pixel0;
+    font-size: 60px;
+}
+h2{
+    font-family: pixel0;
+    font-size: 50px;
+}
+h3{
+    font-family: pixel0;
+    font-size: 40px;
 }
 
 p{
     font-family: pixel0;
+    font-size: 20px;
 }

@@ -14,7 +14,10 @@ aside{
 
 .aside_button{
     font-family: pixel0;
-    min-width: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    min-width: 250px;
     width: 100%;
     border-radius: 5px;
 }
