@@ -2,6 +2,7 @@ aside{
     border: 1px solid white;
     border-radius: 15px;
     color: white;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1); /*cмещение по горизонтале, вертикале, размытие, цвет */
 }
 
 .aside_button_panel{
