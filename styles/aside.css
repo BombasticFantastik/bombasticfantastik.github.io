@@ -5,6 +5,10 @@ aside{
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 1); /*cмещение по горизонтале, вертикале, размытие, цвет */
 }
 
+.aside_link{
+
+}
+
 .aside_button_panel{
     padding: 10px;
     display: flex;
