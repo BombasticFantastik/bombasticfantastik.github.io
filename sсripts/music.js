@@ -8,11 +8,11 @@ function BackSong(){
     
 }
 function PauseSong(){
-    if (player.paused) {
-        player.play()
+    if (audio.paused) {
+        audio.play()
     }
     else {
-        player.pause()
+        audio.pause()
     }
 }
 function NextSong(){
