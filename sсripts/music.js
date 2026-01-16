@@ -1,8 +1,10 @@
 //let play= document.getElementById('player')
 
 let audio= new Audio()
+let song_index=0 
 
-audio.src='music/Nautilus_Pompilius_-_Knyaz_tishiny_Naugad_remastering_68595789.mp3'
+const all_songs=['investigation','monkey','scheme']
+audio.src='music/investigation.mp3'
 audio.volume=0.5
 
 function BackSong(){
@@ -17,7 +19,16 @@ function PauseSong(){
     }
 }
 function NextSong(){
-    
+    if (song_index==all_songs.length-1){
+        song_index=0
+    }
+    else
+    {
+        song_index+=1
+    }
+    audio.src='music/'+all_songs[song_index]+'.mp3'
+    console.log(song_index)
+    audio.play()
 }
 
 // function ChangeVolume(){
@@ -40,6 +51,15 @@ window.addEventListener('DOMContentLoaded',()=>{
     pause_button.onclick= ()=> PauseSong();
     next_button.onclick= ()=>NextSong();
     //audio.volume=0.1
+
+
+    // циклический повтор после паузы 2 сек
+    audio.addEventListener('ended', function() {
+        NextSong()
+        //setTimeout(() => audio.play(), 2000);
+    });
+
+    
     
 })
 
