@@ -3,19 +3,33 @@
 let audio= new Audio()
 let song_index=0 
 
-const all_songs=['investigation','monkey','scheme']
-audio.src='music/investigation.mp3'
+const all_songs=['Investigation','Monkey','Scheme']
+audio.src='music/Investigation.mp3'
 audio.volume=0.5
 
 function BackSong(){
+
+    if (song_index==0){
+        song_index=all_songs.length-1
+    }
+    else
+    {
+        song_index-=1
+    }
+    audio.src='music/'+all_songs[song_index]+'.mp3'
+    song_name.textContent=all_songs[song_index]
+    
+    audio.play()
     
 }
 function PauseSong(){
     if (audio.paused) {
         audio.play()
+        pause_button.textContent='||'
     }
     else {
         audio.pause()
+        pause_button.textContent='|>'
     }
 }
 function NextSong(){
@@ -27,14 +41,15 @@ function NextSong(){
         song_index+=1
     }
     audio.src='music/'+all_songs[song_index]+'.mp3'
-    console.log(song_index)
+    song_name.textContent=all_songs[song_index]
+    
     audio.play()
 }
 
 // function ChangeVolume(){
 //     audio.volume=volume_input.value/100
 // }
-console.log(audio.volume)
+
 
 window.addEventListener('DOMContentLoaded',()=>{
 
@@ -42,6 +57,8 @@ window.addEventListener('DOMContentLoaded',()=>{
     let back_button=document.getElementById('back_button');
     let pause_button=document.getElementById('pause_button');
     let next_button=document.getElementById('next_button');
+    let song_name=document.getElementById('song_name');
+    song_name.textContent=all_songs[song_index]
     
     volume_input.addEventListener('input',()=>{
         audio.volume=volume_input.value/100
