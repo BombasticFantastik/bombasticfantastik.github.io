@@ -20,19 +20,23 @@
           <button id="projects_button" class="aside_button">My projects</button>
           <button id="contacts_button" class="aside_button">Contacts</button>
         </div>
-        <div class="aside_player">
-          <p>Player</p>
-          <p class="aside_player_song_name" id="song_name">Song name</p>
-          <input id="volume_input" type="range" min="0" max="100" value="50"/>
-          <div class="aside_player_mixer">
-            <div class="aside_player_mixer_button_panel">
-              <button id="back_button" class="aside_player_mixer_button"><<</button>
-              <button id="pause_button" class="aside_player_mixer_button">|></button>
-              <button id="next_button" class="aside_player_mixer_button">>></button>
+        <hr class="aside_hr" />
+        <div class="aside_player_block">
+        <p>[Player]</p>
+          <div class="aside_player">
+            <p class="aside_player_song_name" id="song_name">Song name</p>
+            <p>00_00</p>
+            <input id="volume_input" type="range" min="0" max="100" value="50"/>
+            <div class="aside_player_mixer">
+              <div class="aside_player_mixer_button_panel">
+                <button id="back_button" class="aside_player_mixer_button"><<</button>
+                <button id="pause_button" class="aside_player_mixer_button">|></button>
+                <button id="next_button" class="aside_player_mixer_button">>></button>
+              </div>
             </div>
           </div>
-
         </div>
+        <hr class="aside_hr"/>
       </aside>
       <main id="content-area">
         
