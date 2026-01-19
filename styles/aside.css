@@ -77,3 +77,9 @@ aside{
 .aside_player_song_name{
 
 }
+
+.aside_song_time_panel{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
