@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     // setTimeout(() => {
     //     song_timer.textContent=audio.currentTime
-    // }, 100 );
+    // }, 100 );//длительность музыки и её прогресс бар
 
 
     
@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         //setTimeout(() => audio.play(), 2000);
     });
 
-    //длительность музыки и её прогресс бар
+    
     let song_timer=document.getElementById('song_timer')
     let song_duration=document.getElementById('song_duration');
     audio.addEventListener('timeupdate', function() {
