@@ -4,6 +4,10 @@ body{
     font-weight: bold;
 }
 
+body,h1,h2,h3,input,button{
+    cursor: none;
+}
+
 h1{
     font-family: pixel0;
     font-size: 60px;

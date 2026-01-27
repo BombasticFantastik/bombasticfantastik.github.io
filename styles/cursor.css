@@ -1,0 +1,19 @@
+#custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 32px;  
+  height: 32px;
+  background-image: url('/cursors/arrow_sprite.png');
+  background-size: cover;
+  display: block !important;
+}
+
+#custom-cursor.default { background-image: url('/cursors/arrow_sprite.png');
+display: block !important; }
+
+#custom-cursor.text { background-image: url('/cursors/cell_sprite.png');
+display: block !important; }
+
+#custom-cursor.pointer { background-image: url('pointer-sprite.png');
+display: block !important; }
