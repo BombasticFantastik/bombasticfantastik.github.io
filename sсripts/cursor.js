@@ -1,69 +1,50 @@
+const cursor = document.getElementById('custom-cursor');
+let frame = 0;
+const total_frames = 21;
 
 
-// images_numbers=[
-//  '002',
-//  '005',
-//  '008',
-//  '011',
-//  '014',
-//  '017',
-//  '020',
-//  '023',
-//  '026',
-//  '029',
-//  '032',
-//  '035',
-//  '038',
-//  '041',
-//  '044',
-//  '047',
-//  '050',
-//  '053',
-//  '056',
-//  '059',
-//  '062'
-// ]
-// images_idx=0
+// document.addEventListener('mouseover', () => {
+//     console.log('вышел');
+// });
 
-// function animate_cursor()
-// {
-//     document.body.style.cursor=`url(${'cursors/arrow_'+images_numbers[images_idx]+'.png'}), auto`;
-//     images_idx=(images_idx+1)%images_numbers.length
-//     console.log('cursors/arrow_'+images_numbers[images_idx]+'.png')
-// }
+// document.addEventListener('mouseout', () => {
+//     console.log('вошел');
+// });
+
+window.addEventListener('mousemove', (e) => {
+    // if (cursor.style.display = 'none') {
+    //     cursor.style.display = 'block';
+    // }
+    //console.log(cursor.style.left,e.clientX);
+    
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
 
 
-// setInterval(animate_cursor,100)
-
-const cursor = document.getElementById('custom-cursor')
-console.log(cursor)
-let frame=0
-const total_frames=21;
-
-window.addEventListener('mousemove',(e)=>{
-    cursor.style.left=e.clientX+'px'
-    cursor.style.top=e.clientY+'px'
-})
 
 window.addEventListener('mouseover', (e) => {
     if (e.target.matches('h1, h2, h3, p, a')) {
-        cursor.className = 'text';
+        cursor.className='text';
+    } else if (e.target.matches('button')) {
+        cursor.className='button';
     }
+
+    console.log(window.innerWidth,window.innerHeight)
+    
 });
+
 
 window.addEventListener('mouseout', (e) => {
-    if (e.target.matches('h1, h2, h3, p, a')) {
-        cursor.className = 'default';
+    if (e.target.matches('h1, h2, h3, p, a, button','div')) {
+        cursor.className = 'default'; 
     }
 });
 
-function animate_cursor()
-{
-    frame=(frame+1)%total_frames
-    const offset=frame*64
-    cursor.style.backgroundPosition=`-${offset}px 0px`
-    //console.log('cursors/arrow_'+images_numbers[images_idx]+'.png')
+function animate_cursor() {
+    frame = (frame + 1) % total_frames;
+    const offset = frame * 64;
+    cursor.style.backgroundPosition = `-${offset}px 0px`;
 }
 
-setInterval(animate_cursor,100)
-
+setInterval(animate_cursor, 125);

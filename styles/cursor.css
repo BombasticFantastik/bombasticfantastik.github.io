@@ -6,14 +6,12 @@
   height: 32px;
   background-image: url('/cursors/arrow_sprite.png');
   background-size: cover;
-  display: block !important;
 }
 
-#custom-cursor.default { background-image: url('/cursors/arrow_sprite.png');
-display: block !important; }
+#custom-cursor.default { background-image: url('/cursors/arrow_sprite.png');}
 
-#custom-cursor.text { background-image: url('/cursors/cell_sprite.png');
-display: block !important; }
+#custom-cursor.text { background-image: url('/cursors/cell_sprite.png'); }
 
-#custom-cursor.pointer { background-image: url('pointer-sprite.png');
-display: block !important; }
+#custom-cursor.button { background-image: url('/cursors/hand_sprite.png');}
+
+#custom-cursor.none { background-image: url('none');}
