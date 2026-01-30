@@ -3,20 +3,10 @@ let frame = 0;
 const total_frames = 21;
 
 
-// document.addEventListener('mouseover', () => {
-//     console.log('вышел');
-// });
 
-// document.addEventListener('mouseout', () => {
-//     console.log('вошел');
-// });
 
 window.addEventListener('mousemove', (e) => {
-    // if (cursor.style.display = 'none') {
-    //     cursor.style.display = 'block';
-    // }
-    //console.log(cursor.style.left,e.clientX);
-    
+
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
 });
@@ -29,8 +19,6 @@ window.addEventListener('mouseover', (e) => {
     } else if (e.target.matches('button')) {
         cursor.className='button';
     }
-
-    console.log(window.innerWidth,window.innerHeight)
     
 });
 

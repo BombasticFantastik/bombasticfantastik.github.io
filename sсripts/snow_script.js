@@ -1,6 +1,8 @@
 const snow_canvas=document.getElementById('snow_canvas')
 const ctx=snow_canvas.getContext('2d')
 
+weather='Snow'
+
 let width,height,snowflakes=[];
 
 function init(){
@@ -12,6 +14,7 @@ function init(){
     for (let i = 0;i<150;i++){
         snowflakes.push(new Snowflake())
     }
+    console.log(1)
 }
 class Snowflake{
     constructor(){
@@ -28,7 +31,7 @@ class Snowflake{
         this.x+=this.velX
         this.y+=this.speed
 
-        if (this.y>height){
+        if ((this.y>height)&&(weather)=='Snow' ) {
             this.y=-10;
             this.x=Math.random()*width
         }
@@ -36,21 +39,39 @@ class Snowflake{
     draw(){
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'grey';
         ctx.fill();
     }
 }
 function animate_snow(){
+
+    
     ctx.clearRect(0, 0, width, height);
     snowflakes.forEach(flake => {
+
     flake.update();
     flake.draw();
+    
   });
   requestAnimationFrame(animate_snow);
 }
 window.addEventListener('resize',init);
+
 init()
 animate_snow()
+
+
+
+
+//animate_snow()
+
+document.querySelectorAll('input[type="radio"][name="weather"]').forEach(radio => {
+    radio.addEventListener('change', () => weather=radio.value);
+    console.log(weather)
+});
+
+
+
 
 // const snow_canvas=document.getElementById('snow_canvas')
 // const ctx=snow_canvas.getContext('2d')
