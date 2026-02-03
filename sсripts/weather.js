@@ -7,8 +7,8 @@ let width,height,weather_flakes=[];
 
 
 function rain_method(flake){
-    ctx.fillStyle = 'red';
-    mthod=ctx.fillRect(flake.x, flake.y, 2, 20);
+    ctx.fillStyle = 'blue';
+    mthod=ctx.fillRect(flake.x, flake.y, 3, 20);
     
 }
 function snow_method(flake){
@@ -63,7 +63,7 @@ class WeatherFlake{
                 this.mthod=this.snow_method
             }
             else if(weather=='Rain'){
-                this.speed=Math.random()*1+5
+                this.speed=Math.random()+9
                 this.mthod=this.rain_method
                 
             }

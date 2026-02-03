@@ -48,14 +48,20 @@
           </div>
         </div>
         <hr class="aside_hr"/>
-        <form>
-          <div id="aside_weather_input">
-            <input type="radio" id="Snow" name="weather" value="Snow" checked />
-            <label for="Snow">Snow</label>
-            <input type="radio" id="Clear" name="weather" value="Clear" />
-            <label for="Clear">Clear</label>
-            <input type="radio" id="Rain" name="weather" value="Rain" />
-            <label for="Rain">Rain</label>
+        <form class="aside_weather_form">
+          <div class="aside_weather_input" id="aside_weather_input">
+            <div>
+              <input type="radio" id="Snow" name="weather" value="Snow" checked />
+              <label for="Snow">Let it Snow</label>
+            </div>
+            <div>
+              <input type="radio" id="Clear" name="weather" value="Clear" />
+              <label for="Clear">Let it Clear</label>
+            </div>
+            <div>
+              <input type="radio" id="Rain" name="weather" value="Rain" />
+              <label for="Rain">Let it Rain</label>
+            </div>
           </div>
         </form>
       </aside>
@@ -66,5 +72,6 @@
   
     <script src="/sсripts/cursor.js"></script>
     <script src="/sсripts/weather.js"></script>
+    <script src="/sсripts/get_weather.js></script>
   </body>
 </html>
