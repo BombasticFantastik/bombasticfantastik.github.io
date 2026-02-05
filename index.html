@@ -48,24 +48,29 @@
           </div>
         </div>
         <hr class="aside_hr"/>
-        <form class="aside_weather_form">
-          <div class="aside_weather_input" id="aside_weather_input">
+        <form class="aside_flake_form">
+          <div class="aside_flake_input" id="aside_flake_input">
             <div>
-              <input type="radio" id="Snow" name="weather" value="Snow" checked />
+              <input type="radio" id="Snow" name="flake" value="Snow" checked />
               <label for="Snow">Let it Snow</label>
             </div>
             <div>
-              <input type="radio" id="Clear" name="weather" value="Clear" />
+              <input type="radio" id="Clear" name="flake" value="Clear" />
               <label for="Clear">Let it Clear</label>
             </div>
             <div>
-              <input type="radio" id="Rain" name="weather" value="Rain" />
+              <input type="radio" id="Rain" name="flake" value="Rain" />
               <label for="Rain">Let it Rain</label>
             </div>
           </div>
         </form>
         <hr class="aside_hr"/>
-        <p id="weather_desctiption">Облачно</p>
+        <p>The weather in Kuragino</p>
+        <div class="weather_panel">
+          <p class="weather_main_smile" id="weather_main_smile">Облачно</p>
+          <p class="weather_temp" id="weather_temp">Облачно</p>
+          <p class="weather_main" id="weather_main">Облачно</p>
+        </div>
       </aside>
       <main id="content-area">
         
@@ -73,7 +78,7 @@
     </div>
   
     <script src="/sсripts/cursor.js"></script>
+    <script src="/sсripts/flakes.js"></script>
     <script src="/sсripts/weather.js"></script>
-    <script src="/sсripts/see_weather.js"></script>
   </body>
 </html>

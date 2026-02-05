@@ -1,0 +1,22 @@
+.weather_panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    padding: 0px;
+    
+}
+
+.weather_main{
+height: 1px;
+    
+}
+.weather_main_smile{
+    
+
+}
+
+.weather_temp{
+    
+
+}
