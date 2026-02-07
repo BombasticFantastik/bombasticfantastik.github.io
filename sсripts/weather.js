@@ -20,9 +20,19 @@ async function getWeather(){
             main="Clouds"
             smile="☁️"
         }
-        else if (data.weather[0].main=="Sunny"){
-            main="Sunny"
+        else if (data.weather[0].main=="Clear"){
+            main="CLear"
             smile="☀️"
+        }
+        else if (data.weather[0].main=="Rain"){
+            main="Rain"
+            smile="🌧️"
+
+        }
+        else if (data.weather[0].main=="Thunderstorm"){
+            main="Thunderstorm"
+            smile="⛈️"
+
         }
         
         //температура
@@ -31,6 +41,12 @@ async function getWeather(){
         }
         else if (data.main.temp<0){
             temp=data.main.temp+"❄️"
+        }
+        else if (data.main.temp<15){
+            temp=data.main.temp+"♨️"
+        }
+        else if (data.main.temp<0){
+            temp=data.main.temp+"🥵"
         }
         
         weather_main_smile.textContent=smile
