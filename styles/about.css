@@ -12,3 +12,21 @@
     font-family: pixel0;
     font-size: 25px;
 }
+
+.about_img{
+    border: 1px solid white;
+    border-radius: 30px;
+    height: 220px;
+    width: 220px;
+}
+
+.about_greatings{
+    display: flex;
+    gap: 15px;
+}
+
+.about_greatings_h3{
+    margin-top: -8px;
+}
+
+
