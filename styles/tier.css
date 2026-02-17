@@ -1,0 +1,38 @@
+.tier_list{
+
+}
+.tier_SSS{
+    /* padding: 0px;
+    margin-top: 0px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tier_SS{
+    /* margin-top: 0px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tier_S{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.SSS_text{
+    padding: 35px;
+    background-color: red;
+}
+.SS_text{
+    padding: 35px;
+    background-color: red;
+}
+.S_text{
+    padding: 35px;
+    background-color: red;
+}
+
+.tier_img{
+    height: 100px;
+}
