@@ -1,38 +1,30 @@
 .tier_list{
 
 }
-.tier_SSS{
-    /* padding: 0px;
-    margin-top: 0px; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.tier_SS{
-    /* margin-top: 0px; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 .tier_S{
-    
+
     display: flex;
     flex-direction: row;
-    align-items: center;
+    height: 100px;
+    
+    /* align-items: center; */
 }
-.SSS_text{
-    padding: 35px;
-    background-color: red;
+.S_games{
+    display: flex;
 }
-.SS_text{
-    padding: 35px;
-    background-color: red;
-}
+
 .S_text{
-    padding: 35px;
+    
+    height: 100px;
+    width: 100px;
+    margin: 0px;
+    padding: 34px;
+    box-sizing: border-box;
     background-color: red;
 }
 
 .tier_img{
     height: 100px;
+    width: 100px;
 }
