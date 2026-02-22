@@ -94,3 +94,4 @@ document.querySelectorAll('input[type="radio"][name="flake"]').forEach(radio => 
     radio.addEventListener('change', () => weather=radio.value);
     //console.log(weather)
 });
+
