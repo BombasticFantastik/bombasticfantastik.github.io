@@ -20,9 +20,27 @@ function init(){
     snow_canvas.height = height;
     console.log(width,height)
     weather_flakes=[];
-    for (let i = 0;i<150;i++){
+    for (let i = 0;i<300;i++){
         weather_flakes.push(new WeatherFlake(snow_method))
     }
+    //console.log(1)
+}
+
+function reinit(){//flex0
+    const flex0=document.getElementById('flex0')
+
+
+    width = window.innerWidth;
+    height =flex0.scrollHeight
+
+    const snow_canvas=document.getElementById('snow_canvas')
+    snow_canvas.width = width;
+    snow_canvas.height = height;
+    console.log(width,height)
+    // weather_flakes=[];
+    // for (let i = 0;i<150;i++){
+    //     weather_flakes.push(new WeatherFlake(snow_method))
+    // }
     //console.log(1)
 }
 class WeatherFlake{
@@ -94,4 +112,6 @@ document.querySelectorAll('input[type="radio"][name="flake"]').forEach(radio => 
     radio.addEventListener('change', () => weather=radio.value);
     //console.log(weather)
 });
+
+
 
