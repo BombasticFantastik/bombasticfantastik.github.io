@@ -13,11 +13,11 @@ window.addEventListener('DOMContentLoaded',()=>{
     LoadPage('home.html');
     let home_button=document.getElementById('home_button');
     let about_button=document.getElementById('about_button');
-    let projects_button=document.getElementById('projects_button');
+    let resume_button=document.getElementById('resume_button');
     let contacts_button=document.getElementById('contacts_button');
     home_button.onclick = ()=> LoadPage('home.html');
     about_button.onclick= ()=> LoadPage('about.html');
-    projects_button.onclick= ()=>LoadPage('projects.html');
+    resume_button.onclick= ()=>LoadPage('resume.html');
     contacts_button.onclick= ()=>LoadPage('contacts.html');
 })
 
