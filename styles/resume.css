@@ -12,3 +12,12 @@
     font-family: pixel0;
     font-size: 25px;
 }
+
+.resume_downoload_block{
+    display: flex;
+    justify-content: center;
+}
+.resume_downoload_icon{
+    width: 100px;
+    height: 100px;
+}
