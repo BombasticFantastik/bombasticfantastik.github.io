@@ -31,3 +31,14 @@ p{
 b{
     color: yellow;
 }
+
+a{
+ 
+    color: yellow;
+    text-decoration: none
+}
+
+a:hover {
+    color: blue;
+    /* background: #e24486; */
+}
