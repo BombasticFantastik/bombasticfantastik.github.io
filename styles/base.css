@@ -35,10 +35,17 @@ b{
 a{
  
     color: yellow;
-    text-decoration: none
+    text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 a:hover {
-    color: blue;
-    /* background: #e24486; */
+    /*color: blue;
+     text-shadow: 1px; 
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1); */
+    text-shadow: 
+        0 0 5px #fafe00, 
+        0 0 10px #fafe00, 
+        0 0 20px #fafe00; 
+    
 }
