@@ -13,6 +13,7 @@ body,h1,h2,h3,input,button,label{
 h1{
     font-family: pixel0;
     font-size: 60px;
+        
 }
 h2{
     font-family: pixel0;
@@ -21,6 +22,11 @@ h2{
 h3{
     font-family: pixel0;
     font-size: 40px;
+}
+
+h4{
+    font-family: pixel0;
+    font-size: 30px;
 }
 
 p{
@@ -47,5 +53,10 @@ a:hover {
         0 0 5px #fafe00, 
         0 0 10px #fafe00, 
         0 0 20px #fafe00; 
+
+        /* text-shadow: 
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff, 
+        0 0 20px #ffffff;  */
     
 }

@@ -18,11 +18,13 @@
     border-radius: 30px;
     height: 220px;
     width: 220px;
+    float: left;
+    
 }
 
 .about_greatings{
     display: flex;
-    gap: 15px;
+    gap: 15px; 
 }
 
 .about_greatings_h3{
