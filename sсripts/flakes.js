@@ -1,5 +1,6 @@
 const snow_canvas=document.getElementById('snow_canvas')
 const ctx=snow_canvas.getContext('2d')
+let is_it_your_first_visit=true
 
 weather='Snow'
 
@@ -14,8 +15,9 @@ function snow_method(flake){
 //let mthod=draw_snow_flake
 
 function init(){
-    width = window.innerWidth;
+
     height = document.documentElement.scrollHeight;
+    width = window.innerWidth;
     snow_canvas.width = width;
     snow_canvas.height = height;
     console.log(width,height)
@@ -112,6 +114,12 @@ document.querySelectorAll('input[type="radio"][name="flake"]').forEach(radio => 
     radio.addEventListener('change', () => weather=radio.value);
     //console.log(weather)
 });
+
+window.addEventListener('load', ()=>{
+    init();
+})
+
+
 
 
 
