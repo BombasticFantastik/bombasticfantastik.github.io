@@ -1,6 +1,6 @@
 const snow_canvas=document.getElementById('snow_canvas')
 const ctx=snow_canvas.getContext('2d')
-let is_it_your_first_visit=true
+let is_it_your_first_visit=true//КОСТЫЛЬНАЯ ПЕРЕМЕННАЯ
 
 weather='Snow'
 
@@ -31,9 +31,20 @@ function init(){
 function reinit(){//flex0
     const flex0=document.getElementById('flex0')
 
-
+    
     width = window.innerWidth;
-    height =flex0.scrollHeight
+
+
+    //МЕГА КОСТЫЛЬ
+    if (is_it_your_first_visit){
+        height =1807
+        is_it_your_first_visit=false
+    }
+    else{
+        height =flex0.scrollHeight
+    }
+    //КОНЕЦ МЕГА КОСТЫЛЯ
+    
 
     const snow_canvas=document.getElementById('snow_canvas')
     snow_canvas.width = width;
