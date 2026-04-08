@@ -54,14 +54,16 @@
     <div class="contacts_gif_content">
         <img class="contacts_gif_img" src="gifs/search.gif">
     </div>
-    <p>Searching for more, huh ? Maybe later</p>
+    <p>Searching for <a id="dvd_button">more</a>, huh ? Maybe later</p>
     
 <!-- добавить display: NONE и при нажатии что бы появлялся -->
     <marquee
+      hidden
+      id="dvd_sign"
       direction="down"
       behavior="alternate"
-      style="position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; "> 
-      <marquee behavior="alternate"><img src="images/dvd_logo.png"></marquee>
+      style="position: fixed; left: 0; top: 0; width: 100vw; height: 100vh;"> 
+      <marquee behavior="alternate"><img src="images/dvd_logo.png" style="height: 100px;"></marquee>
     </marquee>
   </div>
 </section>
