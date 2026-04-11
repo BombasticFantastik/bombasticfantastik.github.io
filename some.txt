@@ -69,10 +69,6 @@
 
 <!-- <section class="contacts">
   <div class="contacts__content">
-    <h1>Contact me</h1>
-    <h3>You can contact me in next ways:</h3>
-    
-
     <div class="contacts_gif_content">
         <img class="contacts_gif_img" src="gifs/search.gif">
     </div>
