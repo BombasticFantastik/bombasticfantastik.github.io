@@ -18,4 +18,6 @@ ew_88x312.onclick = ()=> {
     song_name.textContent='Secret track 0'
     audio.src='other_files/ElectronicWarfare.mp3'
     PauseSong()
+    let ew_dialog=document.getElementById('ew_dialog')
+    ew_dialog.showModal()
 }

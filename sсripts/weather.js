@@ -7,6 +7,7 @@ const weather_temp = document.getElementById('weather_temp');
 async function getWeather(){
     const city='Kuragino'
     const url= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=ru`;
+    console.log(url)
     try {
         const response= await fetch(url)
         if (!response.ok){
@@ -32,8 +33,12 @@ async function getWeather(){
         else if (data.weather[0].main=="Thunderstorm"){
             main="Thunderstorm"
             smile="⛈️"
-
         }
+        else if (data.weather[0].main=="Snow"){
+            main="Snow"
+            smile="🌨️"
+        }
+        
         
         //температура
         if (data.main.temp<-15){

@@ -30,7 +30,15 @@
     width: 20%;
 
 }
-//СДЕЛАТЬ подсвечивание кнокпки
+
+.resume_downoload_border:hover{
+    transition: all 0.2s ease;
+    box-shadow: 
+        0 0 10px #ffffff, 
+        0 0 15px #ffffff, 
+        0 0 25px #ffffff; 
+}
+
 .resume_link{
     text-decoration: none;
 }
