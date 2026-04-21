@@ -10,6 +10,7 @@
     <script src="/sсripts/music.js"></script>
     
     
+    
   </head>
   <body>
 <!-- ЕФИМ СКАЗАЛ ЧТО НАДО ПО ДРУГОМУ ЭТО СДЕЛАТЬ, ИСПОЛЬЗОВАТЬ FLEX ИЛИ ТИПО ТОГО -->
@@ -91,7 +92,7 @@
 
       </main>
       <!-- рэб пасхалка  -->
-      <dialog class="ew_dialog" id="ew_dialog">Hi, you've found my first secret. Can you find all three?</dialog>
+      <dialog class="secret_dialog" id="secret_dialog">_</dialog>
       
 
     </div>
@@ -130,6 +131,16 @@
         <img src="88x31/angry-birds.gif">
       </div>
     </footer>
+
+    <!-- dvd пасхалка -->
+    <marquee
+      hidden
+      id="dvd_sign"
+      direction="down"
+      behavior="alternate"
+      style="position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; z-index: 0;"> 
+      <marquee behavior="alternate"><img src="images/dvd_logo.png" id="dvd_sign_img" style="height: 100px;"></marquee>
+    </marquee>
   
     <script src="/sсripts/dvd_script.js" defer></script>
     <script src="/sсripts/cursor.js"></script>
@@ -137,5 +148,6 @@
     <script src="/sсripts/weather.js"></script>
     <script src="/sсripts/flakes.js"></script>
     <script src="/sсripts/рэбscript.js"></script>
+    <script src="/sсripts/secretsript.js"></script>
   </body>
 </html>
