@@ -1,6 +1,9 @@
+dvd_secret=true
 document.addEventListener('click',(event)=>{
 
     if (event.target.id=="dvd_button"){
+        show_new_secret_window()
+        
         let dvd_sign=document.getElementById("dvd_sign");
         let dvd_sign_img=document.getElementById("dvd_sign_img");
         
