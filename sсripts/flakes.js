@@ -20,7 +20,7 @@ function init(){
     width = window.innerWidth;
     snow_canvas.width = width;
     snow_canvas.height = height;
-    console.log(width,height)
+    //console.log(width,height)
     weather_flakes=[];
     for (let i = 0;i<300;i++){
         weather_flakes.push(new WeatherFlake(snow_method))
@@ -38,7 +38,7 @@ function reinit(){//flex0
     const snow_canvas=document.getElementById('snow_canvas')
     snow_canvas.width = width;
     snow_canvas.height = height;
-    console.log(width,height)
+    //console.log(width,height)
     // weather_flakes=[];
     // for (let i = 0;i<150;i++){
     //     weather_flakes.push(new WeatherFlake(snow_method))

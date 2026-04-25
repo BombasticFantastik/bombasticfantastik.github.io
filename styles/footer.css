@@ -14,7 +14,10 @@ footer{
     to {transform: translateX(-50%);}
 }
 
-.img_88x31with_link{}
+.img_88x31with_link{
+    height: 880px;
+    width: 880px;
+}
 
 
 .img_88x31with_link:hover{

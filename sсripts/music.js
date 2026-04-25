@@ -108,8 +108,7 @@ window.addEventListener('DOMContentLoaded',()=>{
         song_timer.textContent=Int2Time(currentTime)
 
         song_duration.textContent=Int2Time(duration)
-        //const progress = (currentTime / audio.duration) * 100; 
-        //console.log('Текущая секунда:', Int2Time(currentTime));
+
 
     });
 })

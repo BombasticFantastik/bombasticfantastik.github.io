@@ -7,14 +7,14 @@ const weather_temp = document.getElementById('weather_temp');
 async function getWeather(){
     const city='Kuragino'
     const url= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=ru`;
-    console.log(url)
+    //console.log(url)
     try {
         const response= await fetch(url)
         if (!response.ok){
             console.log('ГОРОДА НЕТ')
         }
         const data = await response.json()
-        console.log(data)
+        //console.log(data)
 
         //погода и смайл
         if (data.weather[0].main=="Clouds"){
