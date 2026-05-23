@@ -48,4 +48,21 @@
     max-width: 500px;
 }
 
+.about_library{
+
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    
+    /* align-items: center; */
+}
+.about_library_book_shelf{
+    display: flex;
+}
+
+.about_library_book_img{
+    height: 100px;
+    width: 100px;
+}
+
 
