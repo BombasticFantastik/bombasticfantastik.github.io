@@ -38,15 +38,9 @@ function reinit(){//flex0
     const snow_canvas=document.getElementById('snow_canvas')
     snow_canvas.width = width;
     snow_canvas.height = height;
-    //console.log(width,height)
-    // weather_flakes=[];
-    // for (let i = 0;i<150;i++){
-    //     weather_flakes.push(new WeatherFlake(snow_method))
-    // }
-    //console.log(1)
 }
 class WeatherFlake{
-    constructor(snow_method){
+    constructor(snow_method,cursor=null){
         this.reset()
         this.snow_method=snow_method
         this.mthod=snow_method
@@ -54,6 +48,7 @@ class WeatherFlake{
     reset(){
         this.x=Math.random()*width
         this.y=Math.random()*height
+        
         this.size=Math.random()*3+1
         this.speed=Math.random()*1+0.5
         this.velX=Math.random()*0.5-0.25
@@ -117,6 +112,94 @@ document.querySelectorAll('input[type="radio"][name="flake"]').forEach(radio => 
 
 window.addEventListener('load', ()=>{
     init();
+})
+
+function click_method(flake){
+    ctx.fillStyle = 'green';
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+    
+}
+
+class ClickFlake{
+    constructor(snow_method){
+        this.reset()
+        this.snow_method=snow_method
+        this.mthod=snow_method
+
+        
+    }
+    reset(){
+
+        // this.x =1*cursor.style.left.slice(0,-2)
+        // this.y = 1*cursor.style.top.slice(0,-2)
+        this.x=1*cursor.style.left.slice(0,-2)
+        this.y=1*cursor.style.top.slice(0,-2)
+        console.log(this.x,this.y)
+        this.size=Math.random()*3+1
+        this.speed=Math.random()*1+0.5
+        this.velX=Math.random()*0.5-0.25
+    }
+    update(){
+        this.x+=this.velX
+        this.y+=this.speed
+
+        if ((this.y>height)&&(weather)!='Clear' ) {
+            this.y=-100;
+            this.x=Math.random()*width
+            this.on_screen=true
+        }
+    }
+    draw(){        
+        ctx.beginPath();
+        if (this.on_screen) {
+            
+            
+            if (weather=='Snow'){
+                this.speed=Math.random()*1+0.5
+                this.mthod=this.snow_method
+            }
+        }
+    
+        this.mthod(this)
+        this.on_screen=false
+        ctx.fill();
+
+        
+    }
+}
+
+document.addEventListener('click',(e)=>{
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method))
+    
 })
 
 
