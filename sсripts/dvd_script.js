@@ -1,4 +1,4 @@
-dvd_secret=true
+//dvd_secret=true
 document.addEventListener('click',(event)=>{
 
     if (event.target.id=="dvd_button"){

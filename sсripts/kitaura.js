@@ -16,7 +16,7 @@ function playKitaAudio(){
 }
 
 document.addEventListener('click',(event)=>{
-  console.log(event.target.classList)
+  //console.log(event.target.classList)
   if (event.target.closest('.kita_88x31')){
     playKitaAudio()
   }

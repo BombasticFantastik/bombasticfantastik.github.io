@@ -1,5 +1,5 @@
 const tomoaudio= new(window.AudioContext)
-
+let cnt_of_tomo=3
 fetch('other_files/йей.mp3')
   .then(tomoresponse => tomoresponse.arrayBuffer())
   .then(tomodata => tomoaudio.decodeAudioData(tomodata))
@@ -16,9 +16,16 @@ function playTomoAudio(){
 }
 
 document.addEventListener('click',(event)=>{
-  console.log(event.target.classList)
+
   if (event.target.closest('.tomo_88x31')){
     playTomoAudio()
+    cnt_of_tomo-=1
+    
+    if (cnt_of_tomo==0){
+      girlsFlight()
+      cnt_of_tomo=3
+      console.log(cnt_of_tomo)
+    }
   }
 });
 
