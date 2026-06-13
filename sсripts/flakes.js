@@ -134,7 +134,7 @@ class ClickFlake{
         // this.y = 1*cursor.style.top.slice(0,-2)
         this.x=1*cursor.style.left.slice(0,-2)
         this.y=1*cursor.style.top.slice(0,-2)
-        console.log(this.x,this.y)
+        //console.log(this.x,this.y)
         this.size=Math.random()*3+1
         this.speed=Math.random()*1+0.5
         this.velX=Math.random()*0.5-0.25

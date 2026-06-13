@@ -1,45 +1,25 @@
-kita_secret=true
-
 const kitaudio= new(window.AudioContext)
 
-let clickBuffer = null;
-
-
 fetch('other_files/kitaura.mp3')
-  .then(response => response.arrayBuffer())
-  .then(data => kitaudio.decodeAudioData(data))
-  .then(buffer => {
-    clickBuffer = buffer;
+  .then(kitaresponse => kitaresponse.arrayBuffer())
+  .then(kitadata => kitaudio.decodeAudioData(kitadata))
+  .then(kitabuffer => {
+    kitaclickBuffer = kitabuffer;
   });
 
 function playKitaAudio(){
-  if (!clickBuffer) return;
-
+  if (!kitaclickBuffer) return;
   const soundSource = kitaudio.createBufferSource();
-  soundSource.buffer = clickBuffer;
-  
+  soundSource.buffer = kitaclickBuffer;
   soundSource.connect(kitaudio.destination);
   soundSource.start(0);
 }
 
-// document.querySelector('kitaura_88x31').addEventListener('click',playKitaAudio)
-// document.querySelector('kitaura_88x31').addEventListener('click',playKitaAudio)
-
-let kitaura_88x31=document.getElementById("kitaura_88x31");
-kitaura_88x31.onclick = ()=> {
-  if (kita_secret){
-    show_new_secret_window()
-    kita_secret=false
+document.addEventListener('click',(event)=>{
+  console.log(event.target.classList)
+  if (event.target.closest('.kita_88x31')){
+    playKitaAudio()
   }
-  playKitaAudio()
-}
+});
 
-let kitaura_88x312=document.getElementById("kitaura_88x312");
-kitaura_88x312.onclick = ()=> {
-  if (kita_secret){
-    show_new_secret_window()
-    kita_secret=false
-  }
-  playKitaAudio()
-  
-}
+

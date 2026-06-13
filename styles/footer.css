@@ -7,7 +7,7 @@ footer{
 
 .footer_88x31{
     display: inline-block;
-    animation: scroll 20s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 @keyframes scroll {
     from {transform: translateX(0);}
@@ -19,6 +19,17 @@ footer{
     width: 880px;
 }
 
+.tomo_88x31{
+
+}
+
+.kita_88x31{
+    
+}
+
+.ew_88x31{
+    
+}
 
 .img_88x31with_link:hover{
     /*color: blue;
