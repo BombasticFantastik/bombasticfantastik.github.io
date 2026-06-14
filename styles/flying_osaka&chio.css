@@ -6,6 +6,7 @@
     width: 1000px;
     height: 1000px;
     z-index: 9999;
+    display: none;
 }
 
 .fly-active{
@@ -17,9 +18,9 @@
     transform: translateX(0) translateY(0) scale(1);
   }
   50% {
-    transform: translateX(-75vw) translateY(0) scale(1.1); 
+    transform: translateX(-100vw) translateY(0) scale(1.1); 
   }
   100% {
-    transform: translateX(-150vw) translateY(0) scale(1); 
+    transform: translateX(-200vw) translateY(0) scale(1); 
   }
 }

@@ -40,7 +40,7 @@ function reinit(){//flex0
     snow_canvas.height = height;
 }
 class WeatherFlake{
-    constructor(snow_method,cursor=null){
+    constructor(snow_method){
         this.reset()
         this.snow_method=snow_method
         this.mthod=snow_method
@@ -121,19 +121,21 @@ function click_method(flake){
 }
 
 class ClickFlake{
-    constructor(snow_method){
+    constructor(snow_method,x,y){
         this.reset()
         this.snow_method=snow_method
         this.mthod=snow_method
-
+        this.x=x
+        this.y=y
         
     }
     reset(){
 
         // this.x =1*cursor.style.left.slice(0,-2)
         // this.y = 1*cursor.style.top.slice(0,-2)
-        this.x=1*cursor.style.left.slice(0,-2)
-        this.y=1*cursor.style.top.slice(0,-2)
+        console.log(cursor.style.top)
+        // this.x=x
+        // this.y=y
         //console.log(this.x,this.y)
         this.size=Math.random()*3+1
         this.speed=Math.random()*1+0.5
@@ -169,36 +171,31 @@ class ClickFlake{
 }
 
 document.addEventListener('click',(e)=>{
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
-    weather_flakes.push(new ClickFlake(click_method))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
     
 })
 
