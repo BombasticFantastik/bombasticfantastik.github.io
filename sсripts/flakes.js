@@ -127,29 +127,29 @@ class ClickFlake{
         this.mthod=snow_method
         this.x=x
         this.y=y
+        this.lifetime=60
         
     }
     reset(){
 
-        // this.x =1*cursor.style.left.slice(0,-2)
-        // this.y = 1*cursor.style.top.slice(0,-2)
-        console.log(cursor.style.top)
-        // this.x=x
-        // this.y=y
-        //console.log(this.x,this.y)
-        this.size=Math.random()*3+1
-        this.speed=Math.random()*1+0.5
-        this.velX=Math.random()*0.5-0.25
+
+
+        this.size=Math.random()*3
+        this.speed=(Math.random()*1+Math.random()*-1)
+        this.velX=(Math.random()*1+Math.random()*-1)
     }
     update(){
         this.x+=this.velX
         this.y+=this.speed
+        this.lifetime-=1
 
-        if ((this.y>height)&&(weather)!='Clear' ) {
-            this.y=-100;
-            this.x=Math.random()*width
-            this.on_screen=true
-        }
+        if (this.lifetime<=0){
+            console.log(this.lifetime)
+            this.lifetime=60
+            weather_flakes=weather_flakes.filter(item => item!=this)
+        };
+
+        
     }
     draw(){        
         ctx.beginPath();
