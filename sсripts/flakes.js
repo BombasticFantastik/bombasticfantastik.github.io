@@ -114,17 +114,79 @@ window.addEventListener('load', ()=>{
     init();
 })
 
-function click_method(flake){
-    ctx.fillStyle = 'green';
-    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
-    
+function GreenYellow_method(flake){
+    ctx.fillStyle = 'rgb(173, 255, 47)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
+
+function DodgerBlue_method(flake){
+    ctx.fillStyle = 'rgb(30, 144, 255)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Fuchsia_method(flake){
+    ctx.fillStyle = 'rgb(255, 0, 255)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Gold_method(flake){
+    ctx.fillStyle = 'rgb(255, 215, 0)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Red_method(flake){
+    ctx.fillStyle = 'rgb(255, 0, 0)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Aquamarine_method(flake){
+    ctx.fillStyle = 'rgb(127, 255, 212)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Lime_method(flake){
+    ctx.fillStyle = 'rgb(0, 255, 0)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Purple_method(flake){
+    ctx.fillStyle = 'rgb(128, 0, 128)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Indigo_method(flake){
+    ctx.fillStyle = 'rgb(75, 0, 130)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function White_method(flake){
+    ctx.fillStyle = 'rgb(255,255,255)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function Salmon_method(flake){
+    ctx.fillStyle = 'rgb(250, 128, 114)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function DeepPink_method(flake){
+    ctx.fillStyle = 'rgb(255, 20, 147)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
+function OrangeRed_method(flake){
+    ctx.fillStyle = 'rgb(255, 69, 0)'
+    mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
+}
+
 
 class ClickFlake{
     constructor(snow_method,x,y){
         this.reset()
-        this.snow_method=snow_method
+        //this.snow_method=snow_method
         this.mthod=snow_method
+        ctx.fillStyle = 'red';
+        
         this.x=x
         this.y=y
         this.lifetime=60
@@ -134,7 +196,7 @@ class ClickFlake{
 
 
 
-        this.size=Math.random()*3
+        this.size=Math.random()*3 +1
         this.speed=(Math.random()*1+Math.random()*-1)
         this.velX=(Math.random()*1+Math.random()*-1)
     }
@@ -144,7 +206,7 @@ class ClickFlake{
         this.lifetime-=1
 
         if (this.lifetime<=0){
-            console.log(this.lifetime)
+            //console.log(this.lifetime)
             this.lifetime=60
             weather_flakes=weather_flakes.filter(item => item!=this)
         };
@@ -158,11 +220,16 @@ class ClickFlake{
             
             if (weather=='Snow'){
                 this.speed=Math.random()*1+0.5
-                this.mthod=this.snow_method
+                //this.mthod=this.snow_method
             }
         }
     
+        
+
+
+        
         this.mthod(this)
+
         this.on_screen=false
         ctx.fill();
 
@@ -171,32 +238,20 @@ class ClickFlake{
 }
 
 document.addEventListener('click',(e)=>{
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
-    weather_flakes.push(new ClickFlake(click_method,e.clientX,e.clientY))
     
+    weather_flakes.push(new ClickFlake(GreenYellow_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(DodgerBlue_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Fuchsia_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Gold_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Lime_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Aquamarine_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Red_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Purple_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Indigo_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(White_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(Salmon_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(DeepPink_method,e.clientX,e.clientY))
+    weather_flakes.push(new ClickFlake(OrangeRed_method,e.clientX,e.clientY))
 })
 
 
