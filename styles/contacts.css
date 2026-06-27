@@ -1,5 +1,6 @@
 .contacts{
     border: 1px solid white;
+    /* width: 82vw; */
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 1); /*cмещение по горизонтале, вертикале, размытие, цвет */
