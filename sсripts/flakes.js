@@ -115,67 +115,69 @@ window.addEventListener('load', ()=>{
 })
 
 function GreenYellow_method(flake){
-    ctx.fillStyle = 'rgb(173, 255, 47)'
+    ctx.fillStyle = `rgba(173, 255, 47, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function DodgerBlue_method(flake){
-    ctx.fillStyle = 'rgb(30, 144, 255)'
+    ctx.fillStyle = `rgb(30, 144, 255, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Fuchsia_method(flake){
-    ctx.fillStyle = 'rgb(255, 0, 255)'
+    ctx.fillStyle = `rgb(255, 0, 255, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Gold_method(flake){
-    ctx.fillStyle = 'rgb(255, 215, 0)'
+    ctx.fillStyle = `rgb(255, 215, 0, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Red_method(flake){
-    ctx.fillStyle = 'rgb(255, 0, 0)'
+    ctx.fillStyle = `rgba(255, 0, 0, ${flake.alpha} )`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Aquamarine_method(flake){
-    ctx.fillStyle = 'rgb(127, 255, 212)'
+    ctx.fillStyle = `rgba(127, 255, 212, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Lime_method(flake){
-    ctx.fillStyle = 'rgb(0, 255, 0)'
+    ctx.fillStyle = `rgba(0, 255, 0, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Purple_method(flake){
-    ctx.fillStyle = 'rgb(128, 0, 128)'
+    ctx.fillStyle = `rgba(128, 0, 128, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Indigo_method(flake){
-    ctx.fillStyle = 'rgb(75, 0, 130)'
+    ctx.fillStyle = `rgba(75, 0, 130, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function White_method(flake){
-    ctx.fillStyle = 'rgb(255,255,255)'
+    ctx.fillStyle = `rgba(255,255,255, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function Salmon_method(flake){
-    ctx.fillStyle = 'rgb(250, 128, 114)'
+    ctx.fillStyle = `rgba(250, 128, 114, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function DeepPink_method(flake){
-    ctx.fillStyle = 'rgb(255, 20, 147)'
+    ctx.fillStyle = `rgba(255, 20, 147, ${flake.alpha})`
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
 function OrangeRed_method(flake){
-    ctx.fillStyle = 'rgb(255, 69, 0)'
+    ctx.fillStyle = `rgba(255, 69, 0, ${flake.alpha})`
+    //ctx.globalAlpha-=0.001
+    
     mthod=ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2); 
 }
 
@@ -184,13 +186,11 @@ class ClickFlake{
     constructor(snow_method,x,y){
         this.reset()
         //this.snow_method=snow_method
-        this.mthod=snow_method
-        ctx.fillStyle = 'red';
-        
+        this.mthod=snow_method    
         this.x=x
         this.y=y
-        this.lifetime=60
-        
+        this.lifetime=100
+        this.alpha=1
     }
     reset(){
 
@@ -204,10 +204,17 @@ class ClickFlake{
         this.x+=this.velX
         this.y+=this.speed
         this.lifetime-=1
-
+        this.alpha-=0.01
+        ctx.save()
+        
+        ctx.restore();
+        
+        //ctx.globalAlpha-=0.001
         if (this.lifetime<=0){
             //console.log(this.lifetime)
-            this.lifetime=60
+            //this.lifetime=60
+            
+            
             weather_flakes=weather_flakes.filter(item => item!=this)
         };
 
@@ -223,12 +230,15 @@ class ClickFlake{
                 //this.mthod=this.snow_method
             }
         }
+
     
         
 
 
         
         this.mthod(this)
+
+        //ctx.restore();
 
         this.on_screen=false
         ctx.fill();

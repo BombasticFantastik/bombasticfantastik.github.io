@@ -10,7 +10,7 @@
 }
 
 .fly-active{
-    animation: flyAcross 4s linear forwards;
+    animation: flyAcross 6s linear forwards;
 }
 
 @keyframes flyAcross {
@@ -18,9 +18,9 @@
     transform: translateX(0) translateY(0) scale(1);
   }
   50% {
-    transform: translateX(-100vw) translateY(0) scale(1.1); 
+    transform: translateX(-200vw) translateY(0) scale(1.1); 
   }
   100% {
-    transform: translateX(-200vw) translateY(0) scale(1); 
+    transform: translateX(-400vw) translateY(0) scale(1); 
   }
 }
