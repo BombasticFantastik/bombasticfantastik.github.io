@@ -1,0 +1,25 @@
+.gallery_border{
+    padding: 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+    width: 20%;
+
+}
+
+.gallery_border:hover{
+    transition: all 0.2s ease;
+    box-shadow: 
+        0 0 10px #ffffff, 
+        0 0 15px #ffffff, 
+        0 0 25px #ffffff; 
+}
+
+.resume_link{
+    text-decoration: none;
+}
+.gallery_additional_block{
+    display: flex;
+    justify-content: center;
+}
