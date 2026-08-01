@@ -1,4 +1,4 @@
-.gallery_border{
+.gallery_button{
     padding: 10px;
     color: white;
     border: 1px solid white;
@@ -8,7 +8,7 @@
 
 }
 
-.gallery_border:hover{
+.gallery_button:hover{
     transition: all 0.2s ease;
     box-shadow: 
         0 0 10px #ffffff, 
