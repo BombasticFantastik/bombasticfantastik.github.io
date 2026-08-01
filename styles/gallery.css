@@ -23,3 +23,6 @@
     display: flex;
     justify-content: center;
 }
+.gallery_drawning{
+    max-width: 200px;
+}
