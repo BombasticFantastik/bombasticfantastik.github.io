@@ -1,3 +1,15 @@
+.gallery{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1); /*cмещение по горизонтале, вертикале, размытие, цвет */
+    height: 120%;
+    display: flex;
+    
+}
+
+
+
 .gallery_button{
     padding: 10px;
     color: white;
@@ -24,5 +36,7 @@
     justify-content: center;
 }
 .gallery_drawning{
-    max-width: 200px;
+    max-width: 600px;
+    grid-area: 1/1;
 }
+/* .gallery_drawning-1{transform: translate(0px,100px);} */

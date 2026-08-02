@@ -6,8 +6,30 @@ async function LoadPieceOfPage(url){
     contentArea.innerHTML=html
     reinit()
 }
-function GetRandomNumHorizontal(){
-    return Math.random()*1000
+function GetRandomNumHorizontal(left){
+    const contentArea = document.getElementById('gallery_content_area') 
+
+    if (left)
+        {
+            return 80*Math.random()
+        }
+    else
+        {
+            return (contentArea.offsetWidth-800)-80*Math.random()
+        }
+}
+
+function GetRandomNumVertical(up){
+    const contentArea = document.getElementById('gallery_content_area') 
+
+    if (up)
+        {
+            return Math.random()*200
+        }
+    else
+        {
+            return Math.random()*-400
+        }
 }
 
 const main_content=document.getElementById('content-area') 
@@ -21,7 +43,21 @@ main_content.addEventListener('click',async (event)=>{
 
         //отрисовка изображений
         const zamn_bikini=document.getElementById('zamn_bikini_drawing')
-        zamn_bikini.style.marginLeft=GetRandomNumHorizontal()+'px'
+        zamn_bikini.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical(true)}px)`;
+
+        const chio_osaka_jump=document.getElementById('chio&osaka_jump_drawning')
+        chio_osaka_jump.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+
+
+        const tomo_yomi_jump=document.getElementById('tomo&yomi_drawning')
+        tomo_yomi_jump.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
+
+        const kagura_sakaki_jump=document.getElementById('kagura&sakaki_drawning')
+        kagura_sakaki_jump.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+
+        const osaka_scream1=document.getElementById('osaka_scream1_drawning')
+        osaka_scream1.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
+        
 
     }
 
