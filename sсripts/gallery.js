@@ -8,28 +8,17 @@ async function LoadPieceOfPage(url){
 }
 function GetRandomNumHorizontal(left){
     const contentArea = document.getElementById('gallery_content_area') 
-
-    if (left)
-        {
-            return 80*Math.random()
-        }
-    else
-        {
-            return (contentArea.offsetWidth-800)-80*Math.random()
-        }
+    if (left){
+        return Math.random()*-150
+    }
+    else{
+        return Math.random()*150
+    }
 }
 
-function GetRandomNumVertical(up){
+function GetRandomNumVertical(){
     const contentArea = document.getElementById('gallery_content_area') 
-
-    if (up)
-        {
-            return Math.random()*200
-        }
-    else
-        {
-            return Math.random()*-400
-        }
+    return Math.random()*10
 }
 
 const main_content=document.getElementById('content-area') 
@@ -43,7 +32,7 @@ main_content.addEventListener('click',async (event)=>{
 
         //отрисовка изображений
         const zamn_bikini=document.getElementById('zamn_bikini_drawing')
-        zamn_bikini.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical(true)}px)`;
+        zamn_bikini.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
 
         const chio_osaka_jump=document.getElementById('chio&osaka_jump_drawning')
         chio_osaka_jump.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
@@ -53,10 +42,10 @@ main_content.addEventListener('click',async (event)=>{
         tomo_yomi_jump.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
 
         const kagura_sakaki_jump=document.getElementById('kagura&sakaki_drawning')
-        kagura_sakaki_jump.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+        kagura_sakaki_jump.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
 
         const osaka_scream1=document.getElementById('osaka_scream1_drawning')
-        osaka_scream1.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
+        osaka_scream1.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
         
 
     }
