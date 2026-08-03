@@ -39,6 +39,17 @@
 .gallery_drawning{
     max-width: 600px;
     grid-area: 1/1;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
+
+    /* border: 1px solid black; */
+    border-radius: 30px;
+}
+
+.gallery_drawning:hover{
+    transition: all 0.2s ease;
+    box-shadow: 
+        0 0 20px #ffffff, 
+        0 0 25px #ffffff, 
+        0 0 35px #ffffff; 
 }
 /* .gallery_drawning-1{transform: translate(0px,100px);} */
