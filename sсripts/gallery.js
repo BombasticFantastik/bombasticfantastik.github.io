@@ -21,6 +21,10 @@ function GetRandomNumVertical(){
     return Math.random()*10
 }
 
+function OpenDrawning(name){
+    window.open(name,'_blank')
+}
+
 const main_content=document.getElementById('content-area') 
 
 
@@ -33,9 +37,17 @@ main_content.addEventListener('click',async (event)=>{
         //отрисовка изображений
         const zamn_bikini=document.getElementById('zamn_bikini_drawing')
         zamn_bikini.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+        //zamn_bikini.onclick(OpenDrawning('gallery_images/'+('zamn_bikinki')+'.jpg'))
+        zamn_bikini.addEventListener('click',()=>{
+            //OpenDrawning('gallery_images/'+('zamn_bikinki')+'.jpg')
+            OpenDrawning(zamn_bikini.src)
+            
+        })
+        console.log(zamn_bikini.src)
 
         const chio_osaka_jump=document.getElementById('chio&osaka_jump_drawning')
         chio_osaka_jump.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+        chio_osaka_jump.onclick= ()=> OpenDrawning('gallery_images/'+('chio&osaka_jump')+'.jpg')
 
 
         const tomo_yomi_jump=document.getElementById('tomo&yomi_drawning')
