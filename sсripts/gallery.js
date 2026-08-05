@@ -25,47 +25,72 @@ function OpenDrawning(name){
     window.open(name,'_blank')
 }
 
-const main_content=document.getElementById('content-area') 
+function StackRandomFiles(image_names){
+    i=0
+    image_names.sort(()=>Math.random()-0.5);
+    image_names.forEach(img => {
+        
+        const image_zone=document.getElementById('img'+i)
+        if(i%2==0){
+            image_zone.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+        }
+        else{
+            image_zone.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
+        }
+        image_zone.addEventListener('click',()=>{
+            OpenDrawning(image_zone.src)
+        })
+        image_zone.src='gallery_images/' +img+'.jpg' ;
+        i+=1
 
+    });
+}
+
+const main_content=document.getElementById('content-area') 
+image_names=['chio&osaka_jump','kagura&sakaki_jump','tomo&yomi_jump', 'zamn_bikinki','osaka_scream1']
 
 main_content.addEventListener('click',async (event)=>{
     const gallery_button=event.target.closest('.gallery_button')
     if (gallery_button){
         
+        
         await LoadPieceOfPage('gallery.html')
-
-        //отрисовка изображений
-        const zamn_bikini=document.getElementById('zamn_bikini_drawing')
-        zamn_bikini.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
-        //zamn_bikini.onclick(OpenDrawning('gallery_images/'+('zamn_bikinki')+'.jpg'))
-        zamn_bikini.addEventListener('click',()=>{
-            OpenDrawning(zamn_bikini.src)
-        })
+        StackRandomFiles(image_names)
 
 
-        const chio_osaka_jump=document.getElementById('chio&osaka_jump_drawning')
-        chio_osaka_jump.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
-        chio_osaka_jump.addEventListener('click',()=>{
-            OpenDrawning(chio_osaka_jump.src)
-        })
+
+        // //отрисовка изображений
+        // const zamn_bikini=document.getElementById('zamn_bikini_drawing')
+        // zamn_bikini.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+        // //zamn_bikini.onclick(OpenDrawning('gallery_images/'+('zamn_bikinki')+'.jpg'))
+        // zamn_bikini.addEventListener('click',()=>{
+        //     OpenDrawning(zamn_bikini.src)
+        // })
 
 
-        const tomo_yomi_jump=document.getElementById('tomo&yomi_drawning')
-        tomo_yomi_jump.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
-        tomo_yomi_jump.addEventListener('click',()=>{
-            OpenDrawning(tomo_yomi_jump.src)
-        })
-        const kagura_sakaki_jump=document.getElementById('kagura&sakaki_drawning')
-        kagura_sakaki_jump.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
-        kagura_sakaki_jump.addEventListener('click',()=>{
-            OpenDrawning(kagura_sakaki_jump.src)
-        })
+        // const chio_osaka_jump=document.getElementById('chio&osaka_jump_drawning')
+        // chio_osaka_jump.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+        // chio_osaka_jump.addEventListener('click',()=>{
+        //     OpenDrawning(chio_osaka_jump.src)
+        // })
 
-        const osaka_scream1=document.getElementById('osaka_scream1_drawning')
-        osaka_scream1.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
-        osaka_scream1.addEventListener('click',()=>{
-            OpenDrawning(osaka_scream1.src)
-        })
+
+        // const tomo_yomi_jump=document.getElementById('tomo&yomi_drawning')
+        // tomo_yomi_jump.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
+        // tomo_yomi_jump.addEventListener('click',()=>{
+        //     OpenDrawning(tomo_yomi_jump.src)
+        // })
+        // const kagura_sakaki_jump=document.getElementById('kagura&sakaki_drawning')
+        // kagura_sakaki_jump.style.transform=`translate(${GetRandomNumHorizontal()}px, ${GetRandomNumVertical()}px)`;
+        // kagura_sakaki_jump.addEventListener('click',()=>{
+        //     OpenDrawning(kagura_sakaki_jump.src)
+        // })
+
+        // const osaka_scream1=document.getElementById('osaka_scream1_drawning')
+        // osaka_scream1.style.transform=`translate(${GetRandomNumHorizontal(true)}px, ${GetRandomNumVertical()}px)`;
+        // osaka_scream1.addEventListener('click',()=>{
+        //     OpenDrawning(osaka_scream1.src)
+        // })
         
 
     }

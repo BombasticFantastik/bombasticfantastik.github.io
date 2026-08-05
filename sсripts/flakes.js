@@ -58,7 +58,7 @@ class WeatherFlake{
         this.y+=this.speed
 
         if ((this.y>height)&&(weather)!='Clear' ) {
-            this.y=-100;
+            this.y=-10;
             this.x=Math.random()*width
             this.on_screen=true
         }
