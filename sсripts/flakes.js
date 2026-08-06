@@ -22,7 +22,7 @@ function init(){
     snow_canvas.height = height;
     //console.log(width,height)
     weather_flakes=[];
-    for (let i = 0;i<300;i++){
+    for (let i = 0;i<500;i++){
         weather_flakes.push(new WeatherFlake(snow_method))
     }
     //console.log(1)
