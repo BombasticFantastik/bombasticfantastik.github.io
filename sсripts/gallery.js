@@ -25,9 +25,16 @@ function OpenDrawning(name){
     window.open(name,'_blank')
 }
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); 
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 function StackRandomFiles(image_names){
     i=0
-    image_names.sort(()=>Math.random()-0.5);
+    shuffle(image_names)
     image_names.forEach(img => {
         
         const image_zone=document.getElementById('img'+i)
@@ -47,7 +54,7 @@ function StackRandomFiles(image_names){
 }
 
 const main_content=document.getElementById('content-area') 
-image_names=['chio&osaka_jump','kagura&sakaki_jump','tomo&yomi_jump', 'zamn_bikinki','osaka_scream1','k-on_blackgirl1']
+image_names=['chio&osaka_jump','kagura&sakaki_jump','tomo&yomi_jump', 'zamn_bikinki','osaka_scream1','k-on_blackgirl1','mio2','mugi1','eng_with_k-on1']
 
 main_content.addEventListener('click',async (event)=>{
     const gallery_button=event.target.closest('.gallery_button')
